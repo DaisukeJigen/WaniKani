@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WK Smaller Lessons And Reviews Buttons
 // @namespace    http://tampermonkey.net/
-// @version      0.17
+// @version      0.18
 // @description  try to take over the world!
 // @author       You
 // @icon         https://i.pinimg.com/236x/5f/68/68/5f6868d18acbc1221de49387a3c07833--batman-poster-batman-batman.jpg
@@ -80,6 +80,7 @@ window.wk_smaller_lessons_and_reviews_buttons = {};
     }
 
     function adjust_buttons() {
+        $('.lesson-and-review-count').detach().appendTo('.navigation-shortcuts')
 
     if($('.lessonAndReviewButtons').length == 0){
         $('.lessons-and-reviews').remove();
